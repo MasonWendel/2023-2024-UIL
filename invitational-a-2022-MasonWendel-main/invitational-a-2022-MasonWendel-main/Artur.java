@@ -11,16 +11,17 @@ public class Artur{
             int fillingNum = 20-i; 
             String filling2  = "";
             for(int j  = 0 ; j<count; j++){
-                filling2+="  ";
+                filling2+=(count%4==0)?"--":"  ";
             }
             System.out.print(filling.substring(0,fillingNum)+"/"+filling2+"\\");
-            if(count%4==0){
+            if(lineDif%4==0){
                 num/=10;
                 
-                System.out.printf("--->%."+((count/4)+2)+"f",num);
+                System.out.printf("--->%."+((lineDif/4)+1)+"f",num);
                 System.out.print("%");
             }
             count++;
+            lineDif++;
             System.out.print("\n");
         }
     }
